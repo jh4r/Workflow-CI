@@ -22,8 +22,8 @@ y = df["Churn"]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # 3. Setup MLflow
-mlflow.set_tracking_uri("http://127.0.0.1:5000")
-mlflow.set_experiment("Eksperimen_Juhar_SkilledV4") 
+# mlflow.set_tracking_uri("http://127.0.0.1:5000")
+# mlflow.set_experiment("Eksperimen_Juhar_SkilledV4") 
 
 # 4. Tuning
 est = RandomForestClassifier(random_state=42)
@@ -69,3 +69,4 @@ with mlflow.start_run(run_name="Skilled_TuningV4"):
     mlflow.log_artifact("training_confusion_matrix.png")
 
 print("Training Selesai! Cek MLflow sekarang")
+
