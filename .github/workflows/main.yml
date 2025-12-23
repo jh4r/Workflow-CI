@@ -32,7 +32,7 @@ jobs:
     - name: Run MLflow Project
       run: |
         cd MLProject
-        mlflow run . --no-conda --experiment-name "CI_Run_jhr"
+        mlflow run . --env-manager=local --experiment-name "CI_Run_jhr"
 
     #Upload Hasil Model
     - name: Upload Artifacts
