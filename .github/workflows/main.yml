@@ -51,5 +51,5 @@ jobs:
 
     - name: Build and Push Docker Image
       run: |
-        docker build -t ${{ secrets.DOCKER_USERNAME }}/project-juhar:latest ./MLProject
-        docker push ${{ secrets.DOCKER_USERNAME }}/project-juhar:latest
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/MSMLproject-juhar:latest ./MLProject
+        docker push ${{ secrets.DOCKER_USERNAME }}/MSMLproject-juhar:latest
