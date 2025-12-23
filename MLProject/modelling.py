@@ -17,7 +17,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 # 2. Setup MLflow
 # Wajib arahkan ke localhost
-mlflow.set_tracking_uri("http://127.0.0.1:5000")
+# mlflow.set_tracking_uri("http://127.0.0.1:5000")
 mlflow.set_experiment("Eksperimen_Juhar_Model")
 
 # 3. Training dengan Autolog
@@ -33,4 +33,5 @@ with mlflow.start_run():
     acc = accuracy_score(y_test, y_pred)
 
     print(f"Training Selesai. Akurasi: {acc:.4f}")
+
     print("Cek dashboard MLflow di http://127.0.0.1:5000")
